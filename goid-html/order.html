@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Website - Item Details</title>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+ <title>Goid</title>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- Add any additional CSS or JavaScript files here -->
+</head>
+<body>
+  <!-- Your website content goes here -->
+
+  <!-- Example of displaying item details -->
+  <h2>Item Details</h2>
+  <div id="item-details">
+    <!-- The item details will be dynamically populated using JavaScript -->
+  </div>
+
+  <!-- Add any additional HTML elements or content here -->
+
+  <script>
+    // JavaScript code to fetch item details based on the item ID from the query parameter
+
+    // Get the item ID from the query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemId = urlParams.get('id');
+
+    // Fetch item details based on the item ID
+    // You can replace this with your own logic to fetch and populate the item details
+    const item = {
+      id: itemId,
+      name: "Mexican Spicy Chicken Burger",
+      description: "This is a mouthwatering item that will satisfy your taste buds.",
+      price: ₹350,
+    };
+
+    // Display the item details in the HTML page
+    const itemDetailsContainer = document.getElementById("item-details");
+    itemDetailsContainer.innerHTML = `
+      <h3>${item.name}</h3>
+      <p>${item.description}</p>
+      <p>Price: $${item.price}</p>
+    `;
+  </script>
+</body>
+</html>
